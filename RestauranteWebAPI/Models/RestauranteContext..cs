@@ -8,7 +8,7 @@ namespace RestauranteWebAPI.Models
 {
     public class RestauranteContext : DbContext
     {
-        public RestauranteContext() : base("RestauranteDB")
+        public RestauranteContext() : base("Name=RestauranteDB")
         {
             Database.SetInitializer<RestauranteContext>(
                 new CreateDatabaseIfNotExists<RestauranteContext>());            
