@@ -13,10 +13,14 @@ namespace RestauranteWebAPI.Models
         public int Id { get; set; }
 
         [MaxLength(100)]
+        [Required]
         public string Nome { get; set; }
 
+        [Range(0, 99999.99)]
+        [Required]
         public float Preco { get; set; }
 
+        [Required]
         public int RestauranteId { get; set; }
 
         [ForeignKey("RestauranteId")]
