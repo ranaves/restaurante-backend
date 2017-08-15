@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RestauranteWebAPI.Models
 {
-    [Table("Pratos")]
+    [Table("Prato")]
     public class Prato
     {
         public int Id { get; set; }
