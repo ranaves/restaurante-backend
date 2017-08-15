@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RestauranteWebAPI.Models
 {
-    [Table("Restaurantes")]
+    [Table("Restaurante")]
     public class Restaurante
     {
         public Restaurante()
