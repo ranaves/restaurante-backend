@@ -21,6 +21,6 @@ namespace RestauranteWebAPI.Models
         [Required]
         public string Nome { get; set; }
 
-        public virtual List<Prato> Pratos { get; set; }
+        public virtual IEnumerable<Prato> Pratos { get; set; }
     }
 }
