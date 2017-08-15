@@ -8,7 +8,7 @@ namespace RestauranteWebAPI.Models
 {
     public class RestauranteContext : DbContext
     {
-        public RestauranteContext() : base("Restaurante")
+        public RestauranteContext() : base("RestauranteDB")
         {
             Database.CreateIfNotExists();
         }
