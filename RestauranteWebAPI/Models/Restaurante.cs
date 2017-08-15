@@ -10,10 +10,17 @@ namespace RestauranteWebAPI.Models
     [Table("Restaurantes")]
     public class Restaurante
     {
+        public Restaurante()
+        {
+            Pratos = new List<Prato>();
+        }
+        
         public int Id { get; set; }
 
         [MaxLength(100)]
         [Required]
         public string Nome { get; set; }
+
+        public virtual List<Prato> Pratos { get; set; }
     }
 }
