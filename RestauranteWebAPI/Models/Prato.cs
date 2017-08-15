@@ -20,11 +20,10 @@ namespace RestauranteWebAPI.Models
         [Required]
         public float Preco { get; set; }
 
-        [Required]
+        [ForeignKey("Restaurante")]
         public int RestauranteId { get; set; }
 
-        [ForeignKey("RestauranteId")]
-        public Restaurante Restaurante { get; set; }
+        public virtual Restaurante Restaurante { get; set; }
 
 
     }
