@@ -102,6 +102,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708160033034_InitialCreate.cs" />
+    <Compile Include="Migrations\201708160033034_InitialCreate.Designer.cs">
+      <DependentUpon>201708160033034_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708160034578_Restaurante.cs" />
+    <Compile Include="Migrations\201708160034578_Restaurante.Designer.cs">
+      <DependentUpon>201708160034578_Restaurante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Prato.cs" />
     <Compile Include="Models\Restaurante.cs" />
     <Compile Include="Models\RestauranteContext..cs" />
@@ -118,6 +127,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708160033034_InitialCreate.resx">
+      <DependentUpon>201708160033034_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708160034578_Restaurante.resx">
+      <DependentUpon>201708160034578_Restaurante.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
