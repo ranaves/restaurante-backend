@@ -31,6 +31,21 @@ namespace RestauranteWebAPI.Controllers
         public IHttpActionResult GetRestaurante(int id)
         {
             Restaurante restaurante = db.Restaurantes.Find(id);
+            
+            if (restaurante == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(restaurante);
+        }
+
+        // GET: api/Restaurantes/nome
+        [ResponseType(typeof(Restaurante))]
+        public IHttpActionResult GetRestaurante(string nome)
+        {
+            IQueryable<Restaurante> restaurante = db.Restaurantes.Where(r => r.Nome.ToUpper().Contains(nome.ToUpper()));
+
             if (restaurante == null)
             {
                 return NotFound();
